@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   slack: circleci/slack@4.9.3
+
 commands:
   notify_on_failure:
     steps:
@@ -310,13 +311,13 @@ jobs:
 #             fi
             
   notify_on_success:
-  docker:
-    - image: cimg/base:stable
-  steps:
-    - slack/notify:
-        event: pass
-        channel: circle-ci-channel
-        template: success_tagged_deployment_1  
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - slack/notify:
+          event: pass
+          channel: circle-ci-channel
+          template: success_tagged_deployment_1  
 workflows:
   default:
     jobs:
