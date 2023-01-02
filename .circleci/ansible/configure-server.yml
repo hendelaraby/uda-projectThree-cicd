@@ -25,5 +25,5 @@
     - setup
   
   roles:
-  - configure-server
-  - configure-prometheus-node-exporter
+    - configure-server
+    - configure-prometheus-node-exporter
