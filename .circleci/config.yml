@@ -24,7 +24,7 @@ commands:
             sudo apt update
             sudo apt install software-properties-common -y
             sudo add-apt-repository --yes --update ppa:ansible/ansible
-            sudo apt install ansible --y
+            sudo apt install ansible -y
 
   install_nodejs:
     description: Install Node.js 13
@@ -34,7 +34,7 @@ commands:
           command: |
             curl -fsSl https://deb.nodesource.com/setup_13.x | sudo -E bash -
             sudo apt install -y nodejs
-            
+
             
   notify_on_failure:
     steps:
